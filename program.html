@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educaser - Formation Moniteur Auto-École</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+ 
+        
+        .mb-40 {
+            margin-bottom: 40px;
+        }
+        
+        /* Hero Section - Modern Design */
+        .program-hero {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(44, 62, 80, 0.95) 100%), url('https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        
+        .program-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .program-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.3;
+        }
+        
+        .program-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 30px 0;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .program-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .contact-point {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 25px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-point:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+        
+        /* Modern Section Styles */
+        .section-light {
+            background-color: var(--light);
+        }
+        
+        .section-gray {
+            background-color: #f0f4f8;
+        }
+        
+        .section-dark {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        /* Content Layouts */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-box.accent {
+            border-left-color: var(--accent);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .feature-box.accent .feature-icon {
+            background: var(--accent);
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .feature-box.accent .feature-title {
+            color: var(--accent);
+        }
+        
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .content-list li {
+            margin-bottom: 15px;
+            padding-left: 32px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .content-list li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .content-list li:nth-child(1):before { content: '1'; }
+        .content-list li:nth-child(2):before { content: '2'; }
+        .content-list li:nth-child(3):before { content: '3'; }
+        .content-list li:nth-child(4):before { content: '4'; }
+        .content-list li:nth-child(5):before { content: '5'; }
+        
+        /* Modern Timeline Layout */
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary);
+            z-index: 2;
+            left: -12px;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .duration-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            font-size: 1rem;
+        }
+        
+       
+        /* Table Design */
+        .modern-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .modern-table th {
+            background: var(--primary);
+            color: white;
+            text-align: left;
+            padding: 18px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .modern-table td {
+            padding: 18px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modern-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .modern-table tr:nth-child(even) {
+            background-color: #f9fbfd;
+        }
+        
+        /* Career Section */
+       
+        
+        .career-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .career-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+         .career-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .career-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(231, 76, 60, 0.15) 0%, transparent 40%);
+        }
+        
+        .career-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .career-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .career-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .career-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+        
+        .career-card:hover {
+            transform: translateY(-10px);
+            background: rgba(52, 152, 219, 0.15);
+            border-color: rgba(52, 152, 219, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .career-icon {
+            width: 70px;
+            height: 70px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+        
+        .career-card:nth-child(2) .career-icon {
+            background: #e74c3c;
+        }
+        
+        .career-card:nth-child(3) .career-icon {
+            background: #2ecc71;
+        }
+        
+        .career-card:nth-child(4) .career-icon {
+            background: #f39c12;
+        }
+        
+        .career-card-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .career-card-desc {
+            color: #bdc3c7;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .career-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .career-stat {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+        
+        .career-stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .career-stat-label {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+        }
+        
+        .career-stat:nth-child(1) .career-stat-value {
+            color: #2ecc71;
+        }
+        
+        .career-stat:nth-child(2) .career-stat-value {
+            color: #f1c40f;
+        }
+        
+        /* Animation */
+        @keyframes careerFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .career-card, .career-stat {
+            animation: careerFadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .career-card:nth-child(1) { animation-delay: 0.1s; }
+        .career-card:nth-child(2) { animation-delay: 0.2s; }
+        .career-card:nth-child(3) { animation-delay: 0.3s; }
+        .career-card:nth-child(4) { animation-delay: 0.4s; }
+        .career-stat:nth-child(1) { animation-delay: 0.5s; }
+        .career-stat:nth-child(2) { animation-delay: 0.6s; }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .career-title {
+                font-size: 2rem;
+            }
+            
+            .career-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .career-stat-value {
+                font-size: 2.5rem;
+            }
+        }
+
+
+         @media (max-width: 1090px) {
+            
+            .career-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+           
+        }
+
+
+        
+
+        
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a2530 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(231, 76, 60, 0.2) 0%, transparent 40%);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(52, 152, 219, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info-large {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 15px 0;
+            display: block;
+            color: white;
+        }
+
+        .section-title1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+           text-align: center;
+        }
+
+
+             .section-title1:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .program-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title1 {
+                font-size: 2rem;
+            }
+            
+            .contact-point {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .timeline-item {
+                margin-bottom: 40px;
+            }
+
+             .training-centers {
+                padding: 70px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .program-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title1 {
+                font-size: 1.7rem;
+            }
+            
+            .feature-box {
+                padding: 30px 20px;
+            }
+            
+            .contact-info-large {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+         .training-centers {
+            padding: 100px 20px;
+            background-color: white;
+        }
+        
+        .centers-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .centers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .center-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            background: white;
+        }
+        
+        .center-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(52, 152, 219, 0.2);
+        }
+        
+        .center-header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .center-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .center-location {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+     
+        .centers-equipment {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+       
+        .equipment-title {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .equipment-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .equipment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.15);
+        }
+        
+        .equipment-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+
+        /* Contact Section */
+        .contact-section1 {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf7 100%);
+            text-align: center;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-title1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 50px;
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-option {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-option:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-icon1 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .contact-option h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info1 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        /* Pedagogical Methods Section */
+        .pedagogical-methods {
+            background: linear-gradient(to bottom, #ffffff, #f0f7fd);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        
+        
+        .method-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        
+        .method-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .method-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(52, 152, 219, 0.2);
+        }
+        
+        .method-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .method-content {
+            flex: 1;
+        }
+        
+        .method-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        /* Evaluation Section */
+        .evaluation-section {
+            background: linear-gradient(to bottom, #f8f9fa, #e8f4ff);
+            position: relative;
+        }
+        
+        .evaluation-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        
+        .evaluation-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .evaluation-steps {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .evaluation-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .step-item {
+            margin-bottom: 30px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .step-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        
+        .step-item:nth-child(3)::before { content: '1'; }
+        .step-item:nth-child(4)::before { content: '2'; }
+        .step-item:nth-child(5)::before { content: '3'; }
+        
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        /* Validation Section */
+        .validation-section {
+            background: linear-gradient(to bottom, #2c3e50, #1a2530);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .validation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(231, 76, 60, 0.15) 0%, transparent 40%);
+        }
+        
+        .diploma-badge {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .diploma-icon {
+            font-size: 4rem;
+            color: var(--success);
+            margin-bottom: 30px;
+        }
+        
+        .diploma-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .diploma-details {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            line-height: 1.8;
+        }
+        
+        .diploma-highlight {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        /* Access Section */
+        .access-section {
+            background: linear-gradient(to bottom, #ffffff, #f9fbfd);
+        }
+        
+        .access-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .access-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .access-image::before {
+            content: '🚗';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+        }
+        
+        .access-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .requirements-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .requirement-item {
+            margin-bottom: 25px;
+            padding-left: 45px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .requirement-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            
+            
+            .evaluation-container, .access-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .access-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+           
+            
+            .method-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .method-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+    </style>
+        
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="contact-bar">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📞</span> 01 69 09 27 27
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span> contact@educaser.fr
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span> Centres : Palaiseau – Noisy-le-Sec – Meaux
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="logo">EDUCASER</div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+  
+     <!-- Hero Section -->
+    <section class="program-hero">
+        <div class="program-hero-content">
+            <h1>Programme détaillé de la formation Moniteur Auto-École</h1>
+            <div class="program-badge">
+                Titre professionnel "Enseignant(e) de la conduite et de la sécurité routière" – RNCP 35329
+            </div>
+            
+            <div class="program-contact">
+                <div class="contact-point">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Niveau Bac +2 – 100 % pris en charge</span>
+                </div>
+                <div class="contact-point">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Centres : Palaiseau – Noisy-le-Sec – Meaux</span>
+                </div>
+                <div class="contact-point">
+                    <i class="fas fa-globe"></i>
+                    <span>http://formation-moniteur-auto-ecole.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Objectives Section -->
+    <section class="section section-pattern">
+        <div class="container">
+            <h2 class="section-title1">🎯 Objectifs de la formation</h2>
+            
+            <div class="content-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="feature-title">Former des professionnels</h3>
+                    <p>Capables de dispenser des cours théoriques et pratiques de conduite automobile</p>
+                </div>
+                
+                <div class="feature-box accent">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">Préparer au titre professionnel</h3>
+                    <p>RNCP 35329 reconnu par l'État</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="feature-title">Développer les compétences</h3>
+                    <p>Pédagogiques, techniques, réglementaires et relationnelles nécessaires à l'exercice du métier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Program Structure - Timeline Layout -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title1">📚 Contenu de la formation</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 60px;">La formation est structurée en 2 blocs de compétences, appelés unités certificatives (UC) : Durée totale : 1 190 heures </p>
+            
+            <div class="timeline-container">
+                <!-- UC 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">UC 1 : Préparer et animer des séances de formation à la conduite en sécurité d’un véhicule léger (Permis B)</h3>
+                        <div class="duration-badge">Durée estimée : 455 heures</div>
+                        <ul class="content-list">
+                            <li>Encadrer un élève en circulation et sur piste.</li>
+                            <li>Conduire une analyse des erreurs de l’élève et le faire progresser.</li>
+                            <li>Adapter son approche pédagogique à différents profils d’élèves.</li>
+                            <li>Mettre en œuvre une pédagogie active et bienveillante.</li>
+                            
+                        </ul>
+
+                        <p style="margin-top:30px; margin-bottom: 20px;"><strong>Thèmes abordés :</strong></p>
+
+                        <ul class="content-list">
+                            <li>Méthodologie pédagogique de la conduite automobile</li>
+                            <li>Connaissance technique du véhicule</li>
+                            <li>Prise en main des outils pédagogiques (simulateur, tablette, carnet de suivi)</li>
+                            <li>Encadrement des leçons pratiques</li>
+                            <li>Techniques d’évaluation des compétences</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- UC 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">UC 2 : Sensibiliser l’ensemble des usagers de la route à l’adoption de comportements sûrs et responsables</h3>
+                        <div class="duration-badge">Durée estimée : 455 heures</div>
+                        <ul class="content-list">
+                            <li>Conduire des séances collectives de sensibilisation à la sécurité routière.</li>
+                            <li>Animer des groupes avec méthode.</li>
+                            <li>Travailler avec différents publics : jeunes, adultes, entreprises, collectivités.</li>
+                            
+                        </ul>
+
+                         <p style="margin-top:30px; margin-bottom: 20px;"><strong>Thèmes abordés :</strong></p>
+
+                        <ul class="content-list">
+                            <li>Animation de séquences pédagogiques en salle</li>
+                            <li>Prévention des risques liés à la conduite</li>
+                            <li>Communication non-violente et assertivité</li>
+                            <li>Construction de supports d’animation</li>
+                            <li>Gestion des groupes et du temps</li>
+                            
+                        </ul>
+
+                        
+                    </div>
+                </div>
+                
+                <!-- Stage -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Stage en entreprise</h3>
+                        <div class="duration-badge">Durée estimée : 280 heures</div>
+                        <ul class="content-list">
+                            <li>Observation et co-animation avec un formateur expérimenté</li>
+                            <li>Encadrement de cours en autonomie (progressif)</li>
+                            <li>Immersion dans le fonctionnement quotidien d’une auto-école</li>
+                            <li>Suivi et accompagnement par un tuteur professionnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Modalités pédagogiques Section -->
+    <section class="section pedagogical-methods">
+        <div class="container">
+            <h2 class="section-title1">📋 Modalités pédagogiques</h2>
+            
+            <div class="method-list">
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-chalkboard"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3 class="method-title">Cours en présentiel dans nos centres (salles équipées)</h3>
+                        
+                    </div>
+                </div>
+                
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-sim-card"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3 class="method-title">Ateliers pratiques avec simulateur de conduite</h3>
+                        
+                    </div>
+                </div>
+                
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3 class="method-title">Mises en situation professionnelles (jeux de rôle, vidéos, cas concrets)</h3>
+                        
+                    </div>
+                </div>
+                
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3 class="method-title">Suivi individualisé par des formateurs diplômés et expérimentés</h3>
+                        
+                    </div>
+                </div>
+                
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3 class="method-title">Accès à une plateforme de révision en ligne</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modalités d'évaluation Section -->
+    <section class="section evaluation-section">
+        <div class="container">
+            <h2 class="section-title1">🧪 Modalités d'évaluation</h2>
+            
+            <div class="evaluation-container">
+             
+                
+                <div class="evaluation-steps">
+                    <h3 style="color: var(--secondary); margin-bottom: 30px; font-size: 1.5rem; text-align: center;">
+                        Évaluations continues : exercices pratiques, QCM, mises en situation
+                    </h3>
+                    <p style="color: #2c3e50; margin-bottom: 30px; font-size: 1.2rem;">Épreuves certificatives finales devant un jury agréé :</p>
+                    <div class="step-item">
+                        <h4 class="step-title">Épreuve pédagogique</h4>
+                        <p>Animation d’une séquence</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <h4 class="step-title">Épreuve technique</h4>
+                        <p>Analyse d’une conduite</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <h4 class="step-title">Entretien final</h4>
+                        <p>Évaluation de la posture professionnelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Validation Section -->
+    <section class="section validation-section">
+        <div class="container">
+            <h2 class="section-title1" style="color: white;">🎓 Validation</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #bdc3c7; ">
+                À l'issue de la formation, les candidats peuvent obtenir :
+            </p>
+            
+            <div class="diploma-badge">
+                <div class="diploma-icon">
+                    <i class="fas fa-award" style="color: #27ae60;"></i>
+                </div>
+                <h3 class="diploma-title">Titre professionnel "Enseignant de la conduite et de la sécurité routière"</h3>
+                <div class="diploma-details">
+                    <p><span class="diploma-highlight" style="color:#27ae60 ;">RNCP 35329</span> • Niveau 5 (équivalent Bac +2)</p>
+                    <p>Certifié par le <span class="diploma-highlight" style="color: #27ae60;">Ministère du Travail</span></p>
+                    <p>Reconnu dans toute la <span class="diploma-highlight" style="color: #27ae60;">France</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Conditions d'accès Section -->
+    <section class="section access-section">
+        <div class="container">
+            <h2 class="section-title1">🔓 Conditions d'accès</h2>
+            
+            <div class="access-container">
+                <div class="access-image">
+                    <!-- Visual element is created with CSS pseudo-element -->
+                </div>
+                
+                <div class="access-content">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 30px; color: var(--secondary);">
+                        Pour intégrer notre formation, vous devez remplir les conditions suivantes :
+                    </h3>
+                    
+                    <ul class="requirements-list">
+                        <li class="requirement-item">Avoir 18 ans minimum</li>
+                        <li class="requirement-item">Être titulaire du permis B depuis au moins 2 ans</li>
+                        <li class="requirement-item">Savoir lire, écrire et s'exprimer correctement en français</li>
+                        <li class="requirement-item">Avoir un casier judiciaire vierge</li>
+                        <li class="requirement-item">Aptitude médicale à la conduite (visite médicale obligatoire)</li>
+                    </ul>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      
+    
+ 
+    
+
+
+    <!-- career section -->
+    
+    <section class="career-section">
+        <div class="career-container">
+            <h2 class="section-title1" style="color: #f9fbfd;">Débouchés professionnels</h2>
+            
+            <div class="career-grid">
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="career-card-title">Moniteur/Monitrice d'auto-école</h3>
+                    
+                </div>
+                
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="career-card-title">Enseignant de sécurité routière</h3>
+                    
+                </div>
+                
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="career-card-title">Coordinateur pédagogique</h3>
+                    
+                </div>
+                
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="career-card-title">Créateur de centre</h3>
+                    
+                </div>
+
+                <div class="career-card">
+                    <div class="career-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="career-card-title">Responsable/créateur de centre de formation</h3>
+                    
+                </div>
+            </div>
+            
+            <div class="career-stats">
+                <div class="career-stat">
+                    
+                    <i class="fa-solid fa-map" style="color:#2ecc71; font-size: 50px; margin-bottom: 20px;"></i>
+                    <div class="career-stat-label">Emplois disponibles partout en France</div>
+                </div>
+                
+                <div class="career-stat">
+                    <div class="career-stat-value">1800-2200€</div>
+                    <div class="career-stat-label">Salaire moyen débutant Net/mois</div>
+                </div>
+                <div class="career-stat">
+                    
+                    <div class="career-stat-label" style="color: #e74c3c;">Possibilité d’évolution rapide vers des fonctions de coordination ou d’entrepreneuriat
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Funding Section -->
+    <section class="section section-pattern">
+        <div class="container">
+            <h2 class="section-title1">📝 Financement de la formation</h2>
+            <p class="section-subtitle" style="text-align: center;">La formation est 100 % financée selon votre profil </p>
+            
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th>Profil</th>
+                        <th>Financement possible</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demandeur d'emploi</td>
+                        <td>France Travail (ex-Pôle emploi)</td>
+                    </tr>
+                    <tr>
+                        <td>Salarié ou alternant</td>
+                        <td>CPF – Plan de développement de compétences – OPCO</td>
+                    </tr>
+                    <tr>
+                        <td>Jeune sortant de formation</td>
+                        <td>Aide régionale – Mission locale</td>
+                    </tr>
+                    <tr>
+                        <td>Projet de reconversion</td>
+                        <td>CPF de transition – Aide individuelle à la formation</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 30px; font-weight: 600; text-align: center; font-size: 1.2rem;">
+                🔵 Nos conseillers vous accompagnent gratuitement dans le montage du dossier.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Section 9: Training Centers -->
+    <section class="training-centers">
+        <div class="centers-container">
+            <div class="section-header">
+                <h2 class="section-title">🧭 Nos centres de formation</h2>
+                
+            </div>
+            
+            <div class="centers-grid">
+                <div class="center-card">
+                    <div class="center-header">
+                        <h3 class="center-name">Palaiseau (91)</h3>
+                        <p class="center-location">Accès RER B</p>
+                    </div>
+                   
+                </div>
+                
+                <div class="center-card">
+                    <div class="center-header" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                        <h3 class="center-name">Noisy-le-Sec (93)</h3>
+                        <p class="center-location">Proche Paris</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="center-card">
+                    <div class="center-header" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+                        <h3 class="center-name">Meaux (77)</h3>
+                        <p class="center-location">Accessible en train</p>
+                    </div>
+                 
+                </div>
+            </div>
+
+           
+            
+            <div class="centers-equipment">
+                <h3 class="equipment-title">Équipements disponibles dans tous nos centres :</h3>
+                <div class="equipment-grid">
+                    <div class="equipment-card">
+                        <div class="equipment-icon"><i class="fas fa-car"></i></div>
+                        <h4>Simulateurs de conduite</h4>
+                        
+                    </div>
+                    <div class="equipment-card">
+                        <div class="equipment-icon"><i class="fas fa-car-side"></i></div>
+                        <h4>Véhicules pédagogiques</h4>
+                        
+                    </div>
+                    <div class="equipment-card">
+                        <div class="equipment-icon"><i class="fas fa-desktop"></i></div>
+                        <h4>Salles multimédia moderne</h4>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section1">
+        <div class="contact-container">
+            <h2 class="contact-title1">📞 Besoin d'un renseignement ?</h2>
+            
+            <div class="contact-options">
+                <div class="contact-option">
+                    <div class="contact-icon1">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Appelez-nous</h3>
+                    <div class="contact-info1">01 69 09 27 27</div>
+                    
+                </div>
+                
+                <div class="contact-option">
+                    <div class="contact-icon1">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Écrivez-nous</h3>
+                    <div class="contact-info1">contact@educaser.fr</div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+   
+    
+     <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Formation Moniteur Auto-École – Educaser</h3>
+                <div class="cta-buttons">
+                <a href="Contact.html#quoteForm" class="cta-button-footer primary-cta">
+                    <i class="fas fa-phone-alt"></i>Demander un devis gratuit 
+                </a>
+                <a href="Contact.html#inscriptionForm" class="cta-button-footer secondary-cta">
+                    <i class="fas fa-file-download"></i>M’inscrire maintenant
+                </a>
+            </div>
+                
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:01 69 09 27 27"><i class="fas fa-phone-alt"></i> 01 69 09 27 27</a></li>
+                    <li><a href="mailto:contact@educaser.fr"><i class="fas fa-envelope"></i> contact@educaser.fr</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Centres : Palaiseau, Noisy-le-Sec, Meaux</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Educaser. Tous droits réservés. | Formation certifiée RNCP 35329
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.feature-box, .stat-card, .timeline-content');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                        }, 300);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                element.style.opacity = "0";
+                element.style.transform = "translateY(30px)";
+                element.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+                observer.observe(element);
+            });
+        });
+    </script>
+        
+
+    </script>
+
+    
+</body>
+</html>

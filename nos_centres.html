@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educaser - Activités Visées</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="JS.js">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+         .centres-hero {
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.9) 0%, rgba(52, 152, 219, 0.95) 100%), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 130px 20px;
+            text-align: center;
+        }
+        
+        .centres-hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .centres-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .centres-intro {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px auto;
+            max-width: 1200px;
+        }
+        
+        .feature-card {
+            background: #2c3e50;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+       .centre-section {
+        padding: 100px 20px;
+        position: relative;
+    }
+    
+    .centre-section:nth-child(odd) {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf7 100%);
+    }
+    
+    .centre-section:nth-child(even) {
+        background: white;
+    }
+    
+    .centre-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        align-items: center;
+    }
+    
+    .centre-info {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+    }
+    
+    .centre-image {
+        flex: 1;
+        width: 100%;
+        
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        
+       
+    }
+
+    
+
+
+  
+
+    .centre-image img {
+        width: 100%;
+        
+    }
+    
+  
+    .centre-name {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 25px;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+    
+    .centre-name:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, #3498db, #2c3e50);
+        border-radius: 2px;
+    }
+    
+    .centre-address {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        font-size: 1.15rem;
+        background: rgba(52, 152, 219, 0.08);
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 4px solid #3498db;
+    }
+    
+    .centre-address i {
+        margin-right: 15px;
+        color: #3498db;
+        font-size: 1.6rem;
+        min-width: 30px;
+    }
+    
+    .equipments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+    }
+    
+    .equipment-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .equipment-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+    }
+    
+    .equipment-item i {
+        color: #3498db;
+        font-size: 1.4rem;
+        min-width: 30px;
+        background: #e3f2fd;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .eq-item-txt {
+        justify-content: center;
+    }
+    .testimonial-box {
+        background: white;
+        border-left: 4px solid #e74c3c;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 40px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+    
+    .testimonial-box::before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 5rem;
+        color: rgba(231, 76, 60, 0.15);
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .testimonial-author {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .testimonial-author::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background: #e74c3c;
+        margin-right: 15px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .centre-container {
+            flex-direction: column;
+        }
+        
+        .centre-image {
+            width: 100%;
+            height: 350px;
+        }
+        
+        .centre-info {
+            order: 2;
+        }
+        
+        .centre-section:nth-child(even) .centre-image {
+            order: 1;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .centre-section {
+            padding: 70px 20px;
+        }
+        
+        .centre-name {
+            font-size: 1.9rem;
+        }
+        
+        .equipments-grid {
+            grid-template-columns: 1fr;
+        }
+
+        
+    }
+        
+        /* Centre Selection Section */
+        .selection-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .selection-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .selection-title {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .selection-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Contact Section */
+        .contact-section1 {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf7 100%);
+            text-align: center;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-title1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 50px;
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-option {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-option:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-icon1 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .contact-option h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info1 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .centre-container {
+                flex-direction: column;
+            }
+            
+            .centre-image {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .centres-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .selection-title, .contact-title1 {
+                font-size: 1.8rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="contact-bar">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📞</span> 01 69 09 27 27
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span> contact@educaser.fr
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span> Centres : Palaiseau – Noisy-le-Sec – Meaux
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="logo">EDUCASER</div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+ <!-- Hero Section -->
+    <section class="centres-hero">
+        <div class="centres-hero-content">
+            <h1>Nos centres de formation</h1>
+            <p class="centres-intro">Proches de chez vous, accessibles, modernes. Nos formations se déroulent dans trois centres situés en Île-de-France, facilement accessibles en transports en commun et aménagés pour un apprentissage optimal.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Agréé et conforme</h3>
+                    <p>Normes de formation professionnelle</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Équipements modernes</h3>
+                    <p>Salles de cours et véhicules pédagogiques</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Équipe à votre écoute</h3>
+                    <p>Professionnels dédiés à votre réussite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Centre Palaiseau -->
+    <section class="centre-section">
+        <div class="centre-container">
+            <div class="centre-info">
+                <h2 class="centre-name">Centre de formation de Palaiseau (91)</h2>
+                
+                <div class="centre-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>À proximité du RER B – Accès rapide depuis Massy, Orsay, Antony, etc.</div>
+                </div>
+                
+                <h3>🛠️ Équipements :</h3>
+                <div class="equipments-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Salles de cours lumineuses</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Véhicules pédagogiques récents</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Salle informatique & simulateur de conduite</div>
+                    </div>
+                </div>
+                
+                <div class="equipments-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-user-friends"></i>
+                        <div ><strong>Public accueilli :</strong> Demandeurs d'emploi, salariés en reconversion, jeunes diplômés</div>
+                    </div>
+                </div>
+                
+                <a href="Contact.html#quoteForm" class="cta-button primary-cta">
+                    <i class="fas fa-file-invoice"></i> Demander un devis à Palaiseau
+                </a>
+            </div>
+            
+            <div class="centre-image">
+                <img src="media/c1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Centre Noisy-le-Sec -->
+    <section class="centre-section">
+        <div class="centre-container">
+            <div class="centre-image">
+                <img src="media/c2.jpg" alt="">
+            </div>
+            
+            <div class="centre-info">
+                <h2 class="centre-name">Centre de formation de Noisy-le-Sec (93)</h2>
+                
+                <div class="centre-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Proche de la gare RER E et de nombreuses lignes de bus – Accès facile depuis Paris, Montreuil, Bobigny...</div>
+                </div>
+                
+                <h3>🛠️ Équipements :</h3>
+                <div class="equipments-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Simulateurs de conduite dernière génération</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Matériel pédagogique complet</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Accès PMR et espaces détente</div>
+                    </div>
+                </div>
+                
+                <div class="equipments-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-star"></i>
+                        <div><strong>Points forts :</strong> Proximité de Paris – diversité des profils – ambiance conviviale</div>
+                    </div>
+                </div>
+                
+                <a href="Contact.html#quoteForm" class="cta-button primary-cta">
+                    <i class="fas fa-file-invoice"></i> Demander un devis à Noisy-le-Sec
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Centre Meaux -->
+    <section class="centre-section">
+        <div class="centre-container">
+            <div class="centre-info">
+                <h2 class="centre-name">Centre de formation de Meaux (77)</h2>
+                
+                <div class="centre-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Accessible par le Transilien depuis Paris Gare de l'Est – idéal pour les habitants de l'est francilien</div>
+                </div>
+                
+                <h3>🛠️ Équipements :</h3>
+                <div class="equipments-grid">
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Parcours de conduite local dédié à la formation</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Salles modernes</div>
+                    </div>
+                    
+                    <div class="equipment-item">
+                        <i class="fas fa-check"></i>
+                        <div>Encadrement par des professionnels du secteur</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"J'ai adoré ma formation à Meaux : formateurs super pédagogues et ambiance très pro."</p>
+                    <div class="testimonial-author">Cynthia R., diplômée 2024</div>
+                </div>
+                
+                <a href="Contact.html#quoteForm" class="cta-button primary-cta">
+                    <i class="fas fa-file-invoice"></i> Demander un devis à Meaux
+                </a>
+            </div>
+            
+            <div class="centre-image">
+                <img src="media/c3.jpg" alt="">
+               
+            </div>
+        </div>
+    </section>
+    
+    <!-- Centre Selection Help -->
+    <section class="selection-section">
+        <div class="selection-container">
+            <h2 class="selection-title">🚗 Vous n'êtes pas sûr du centre à choisir ?</h2>
+            <p class="selection-text">Aucun souci : nos équipes vous orientent vers le lieu le plus pratique selon votre lieu de vie et vos disponibilités.</p>
+            
+            <div class="cta-buttons">
+                <a href="Contact.html#callbackForm" class="cta-button primary-cta">
+                    <i class="fas fa-phone-alt"></i> Être rappelé gratuitement
+                </a>
+                <a href="#" class="cta-button secondary-cta">
+                    <i class="fas fa-file-download"></i> Télécharger le programme complet
+                </a>
+                <a href="#" class="cta-button secondary-cta">
+                    <i class="fas fa-calendar-alt"></i> Voir les dates des sessions
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section1">
+        <div class="contact-container">
+            <h2 class="contact-title1">📞 Besoin d'un renseignement ?</h2>
+            
+            <div class="contact-options">
+                <div class="contact-option">
+                    <div class="contact-icon1">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Appelez-nous</h3>
+                    <div class="contact-info1">01 69 09 27 27</div>
+                    
+                </div>
+                
+                <div class="contact-option">
+                    <div class="contact-icon1">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Écrivez-nous</h3>
+                    <div class="contact-info1">contact@educaser.fr</div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Formation Moniteur Auto-École – Educaser</h3>
+                <div class="cta-buttons">
+                <a href="Contact.html#quoteForm" class="cta-button-footer primary-cta">
+                    <i class="fas fa-phone-alt"></i>Demander un devis gratuit 
+                </a>
+                <a href="Contact.html#inscriptionForm" class="cta-button-footer secondary-cta">
+                    <i class="fas fa-file-download"></i>M’inscrire maintenant
+                </a>
+            </div>
+                
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:01 69 09 27 27"><i class="fas fa-phone-alt"></i> 01 69 09 27 27</a></li>
+                    <li><a href="mailto:contact@educaser.fr"><i class="fas fa-envelope"></i> contact@educaser.fr</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Centres : Palaiseau, Noisy-le-Sec, Meaux</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Educaser. Tous droits réservés. | Formation certifiée RNCP 35329
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        </script>
+</body>
+
+
+
+
+</head>
+</html>

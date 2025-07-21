@@ -20,6 +20,18 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
         
         /* Header Styles - Fixed for mobile */
         header {
@@ -68,7 +80,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -213,7 +225,7 @@
             margin-bottom: 20px;
             font-weight: 700;
             position: relative;
-            display: inline-block;
+           display: inline-block;
         }
         
         .section-title:after {
@@ -335,5 +347,50 @@
         .cta-button-footer:hover {
             transform: translateY(-5px);
             box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+
+        @media ( max-width : 768px ) {
+
+             /* Mobile menu */
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            
+            .nav-menu.active {
+                max-height: 500px;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .nav-menu a {
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
         

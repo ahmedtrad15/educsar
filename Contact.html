@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educaser - Activités Visées</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="JS.js">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+  .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+         .section-title1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+           
+           text-align: center;
+        }
+        
+        
+         .section-title1:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;}
+        
+      
+        .mb-30 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.9) 0%, rgba(44, 62, 80, 0.95) 100%), url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.3;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+
+        /* Form Section Styles */
+        .form-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(52, 152, 219, 0.15);
+            position: relative;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .form-col {
+            flex: 1;
+        }
+        
+        .radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+        
+        
+.radio-option {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+        .radio-input {
+            display: none;
+        }
+        
+       .radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    min-height: 60px; /* Ensures consistent height */
+    word-break: break-word; /* Prevents text overflow */
+}
+        
+        .radio-input:checked + .radio-label {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .quote-section .radio-label {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+        
+        .submit-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .form-note {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        /* Form Section 1: Inscription */
+        .inscription-section {
+            background: linear-gradient(to bottom, #ffffff, #f0f7fd);
+        }
+        
+        /* Form Section 2: Callback */
+        .callback-section {
+            background: linear-gradient(to bottom, #f8f9fa, #e8f4ff);
+        }
+        
+        /* Form Section 3: Quote */
+        .quote-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a2530 100%);
+            color: white;
+        }
+        
+        .quote-section .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .quote-section .form-title,
+        .quote-section .form-label {
+            color: white;
+        }
+        
+        .quote-section .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .quote-section .submit-btn {
+            background: var(--accent);
+        }
+        
+        .quote-section .submit-btn:hover {
+            background: #c0392b;
+        }
+        
+       
+        
+        .hours-info {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 15px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-container {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title1 {
+                font-size: 1.7rem;
+            }
+            
+            .radio-option {
+                min-width: 100px;
+            }
+        }
+
+        
+        
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+           
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .faq-question {
+                padding: 20px;
+            }
+            
+            .faq-answer {
+                padding: 0 20px 20px 20px;
+            }
+            
+            .faq-icon {
+                margin-right: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title1 {
+                font-size: 1.7rem;
+            }
+            
+           
+        }
+    </style>
+
+     
+        
+       
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="contact-bar">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📞</span> 01 69 09 27 27
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span> contact@educaser.fr
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span> Centres : Palaiseau – Noisy-le-Sec – Meaux
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="logo">EDUCASER</div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+ <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Contactez notre équipe</h1>
+            <p class="hero-subtitle">Nous sommes à votre disposition pour répondre à toutes vos questions sur nos formations et vous accompagner dans votre projet professionnel.</p>
+        </div>
+    </section>
+    
+    <!-- Form Section 1: Inscription -->
+    <section class="section inscription-section">
+        <div class="container">
+            <h2 class="section-title1">Formulaire d'inscription</h2>
+            <p class="text-center mb-30" style="max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #7f8c8d;">
+                Formation Moniteur Auto-École – 100 % prise en charge | Centres à Palaiseau – Noisy-le-Sec – Meaux
+            </p>
+            
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Formation Moniteur Auto-École – 100 % prise en charge</h3>
+                    <p>Centres à Palaiseau – Noisy-le-Sec – Meaux</p>
+                </div>
+                
+                <form id="inscriptionForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="lastname" class="form-label">Nom</label>
+                                <input type="text" id="lastname" class="form-control" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="firstname" class="form-label">Prénom</label>
+                                <input type="text" id="firstname" class="form-control" placeholder="Votre prénom" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Téléphone</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Votre numéro" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Votre email" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="city" class="form-label">Ville</label>
+                                <input type="text" id="city" class="form-control" placeholder="Votre ville" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="birthdate" class="form-label">Date de naissance</label>
+                                <input type="date" id="birthdate" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Avez-vous le permis B ?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="permis-oui" name="permis" value="oui" class="radio-input" required>
+                                <label for="permis-oui" class="radio-label">Oui</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="permis-non" name="permis" value="non" class="radio-input">
+                                <label for="permis-non" class="radio-label">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="permis-duree" class="form-label">Depuis combien de temps ?</label>
+                        <input type="text" id="permis-duree" class="form-control" placeholder="Ex: 3 ans">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Je souhaite suivre la formation de :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="formation-moniteur" name="formation" value="moniteur" class="radio-input" required>
+                                <label for="formation-moniteur" class="radio-label">Moniteur Auto-École (niveau Bac +2)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="formation-secretaire" name="formation" value="secretaire" class="radio-input">
+                                <label for="formation-secretaire" class="radio-label">Secrétaire Auto-École (niveau Bac)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Centre de formation préféré :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="centre-palaiseau" name="centre" value="palaiseau" class="radio-input" required>
+                                <label for="centre-palaiseau" class="radio-label">Palaiseau</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="centre-noisy" name="centre" value="noisy" class="radio-input">
+                                <label for="centre-noisy" class="radio-label">Noisy-le-Sec</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="centre-meaux" name="centre" value="meaux" class="radio-input">
+                                <label for="centre-meaux" class="radio-label">Meaux</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="centre-any" name="centre" value="any" class="radio-input">
+                                <label for="centre-any" class="radio-label">Peu importe</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Votre situation actuelle :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="situation-chomage" name="situation" value="chomage" class="radio-input" required>
+                                <label for="situation-chomage" class="radio-label">Demandeur d'emploi</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="situation-salarie" name="situation" value="salarie" class="radio-input">
+                                <label for="situation-salarie" class="radio-label">Salarié(e)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="situation-reconversion" name="situation" value="reconversion" class="radio-input">
+                                <label for="situation-reconversion" class="radio-label">En reconversion</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="situation-other" name="situation" value="other" class="radio-input">
+                                <label for="situation-other" class="radio-label">Autre</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Souhaitez-vous être accompagné pour le financement ?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="finance-oui" name="finance" value="oui" class="radio-input" required>
+                                <label for="finance-oui" class="radio-label">Oui</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="finance-non" name="finance" value="non" class="radio-input">
+                                <label for="finance-non" class="radio-label">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Envoyer ma demande</button>
+                    <p class="form-note">🛡️ Vos données sont protégées. Ce formulaire ne vous engage à rien. Un conseiller vous recontactera sous 24h pour finaliser votre inscription.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Form Section 2: Callback Request -->
+    <section class="section callback-section">
+        <div class="container">
+            <h2 class="section-title1">Demande de rappel</h2>
+            <p class="text-center mb-30" style="max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #7f8c8d;">
+                Vous avez une question ? On vous rappelle gratuitement ! Un conseiller vous recontacte sous 24h.
+            </p>
+            
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Être rappelé par un conseiller</h3>
+                    <p>Remplissez le formulaire ci-dessous et nous vous rappellerons à l'horaire de votre choix.</p>
+                </div>
+                
+                <form id="callbackForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="callback-nom" class="form-label">Nom</label>
+                                <input type="text" id="callback-nom" class="form-control" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="callback-prenom" class="form-label">Prénom</label>
+                                <input type="text" id="callback-prenom" class="form-control" placeholder="Votre prénom" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="callback-telephone" class="form-label">Téléphone</label>
+                                <input type="tel" id="callback-telephone" class="form-control" placeholder="Votre numéro" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="callback-email" class="form-label">Email (facultatif)</label>
+                                <input type="email" id="callback-email" class="form-control" placeholder="Votre email">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Heure préférée pour être rappelé(e) :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="heure-matin" name="heure" value="matin" class="radio-input" required>
+                                <label for="heure-matin" class="radio-label">Matin</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="heure-apresmidi" name="heure" value="apresmidi" class="radio-input">
+                                <label for="heure-apresmidi" class="radio-label">Après-midi</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="heure-any" name="heure" value="any" class="radio-input">
+                                <label for="heure-any" class="radio-label">Peu importe</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Je suis intéressé(e) par :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="interest-moniteur" name="interest" value="moniteur" class="radio-input" required>
+                                <label for="interest-moniteur" class="radio-label">Formation Moniteur</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="interest-secretaire" name="interest" value="secretaire" class="radio-input">
+                                <label for="interest-secretaire" class="radio-label">Formation Secrétaire</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="interest-unsure" name="interest" value="unsure" class="radio-input">
+                                <label for="interest-unsure" class="radio-label">Je ne sais pas encore</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Valider ma demande de rappel</button>
+                    <p class="form-note">🔐 Vos informations sont confidentielles. Ce rappel est gratuit, sans engagement. Nos conseillers sont là pour vous aider à faire le bon choix et vous accompagner dans votre inscription.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Form Section 3: Quote Request -->
+    <section class="section quote-section">
+        <div class="container">
+            <h2 class="section-title1" style="color: white;">Demande de devis</h2>
+            <p class="text-center mb-30" style="max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #bdc3c7;">
+                Recevez un devis personnalisé pour votre formation
+            </p>
+            
+            <div class="form-container">
+                <div class="form-header">
+                    <div class="form-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Estimation financière</h3>
+                    <p>Remplissez ce formulaire pour recevoir une estimation personnalisée du coût de votre formation.</p>
+                </div>
+                
+                <form method="post" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="sender_name" class="form-label">Nom</label>
+                                <input type="text" id="sender_name" class="form-control" placeholder="Votre nom" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="sender_name" class="form-label">Prénom</label>
+                                <input type="text" id="sender_name" class="form-control" placeholder="Votre prénom" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="quote-telephone" class="form-label">Téléphone</label>
+                                <input type="tel" id="quote-telephone" class="form-control" placeholder="Votre numéro" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="quote-email" class="form-label">Email</label>
+                                <input type="email" id="quote-email" class="form-control" placeholder="Votre email" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-ville" class="form-label">Ville</label>
+                        <input type="text" id="quote-ville" class="form-control" placeholder="Votre ville" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Formation souhaitée :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="quote-moniteur" name="quote-formation" value="moniteur" class="radio-input" required>
+                                <label for="quote-moniteur" class="radio-label" >Moniteur Auto-École</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-secretaire" name="quote-formation" value="secretaire" class="radio-input">
+                                <label for="quote-secretaire" class="radio-label" >Secrétaire Auto-École</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Centre de formation préféré :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="quote-palaiseau" name="quote-centre" value="palaiseau" class="radio-input" required>
+                                <label for="quote-palaiseau" class="radio-label">Palaiseau</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-noisy" name="quote-centre" value="noisy" class="radio-input">
+                                <label for="quote-noisy" class="radio-label" >Noisy-le-Sec</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-meaux" name="quote-centre" value="meaux" class="radio-input">
+                                <label for="quote-meaux" class="radio-label">Meaux</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-any" name="quote-centre" value="any" class="radio-input">
+                                <label for="quote-any" class="radio-label" >Peu importe</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Situation actuelle :</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="quote-chomage" name="quote-situation" value="chomage" class="radio-input" required>
+                                <label for="quote-chomage" class="radio-label" >Demandeur d'emploi</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-salarie" name="quote-situation" value="salarie" class="radio-input">
+                                <label for="quote-salarie" class="radio-label" >Salarié(e)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-reconversion" name="quote-situation" value="reconversion" class="radio-input">
+                                <label for="quote-reconversion" class="radio-label" >En reconversion</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-etudiant" name="quote-situation" value="etudiant" class="radio-input">
+                                <label for="quote-etudiant" class="radio-label" >Étudiant/Jeune diplômé</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-other" name="quote-situation" value="other" class="radio-input">
+                                <label for="quote-other" class="radio-label" >Autre</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Souhaitez-vous un accompagnement pour le financement ?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="quote-finance-oui" name="quote-finance" value="oui" class="radio-input" required>
+                                <label for="quote-finance-oui" class="radio-label" >Oui</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="quote-finance-non" name="quote-finance" value="non" class="radio-input">
+                                <label for="quote-finance-non" class="radio-label" >Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-message" class="form-label">Informations complémentaires (facultatif)</label>
+                        <textarea id="quote-message" class="form-control" placeholder="Précisez votre situation..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Envoyer ma demande de devis</button>
+                    <p class="form-note">🔐 Vos données sont confidentielles. Ce formulaire ne vous engage à rien. Vous recevrez un devis gratuit et personnalisé sous 24h ouvrées.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+ 
+
+
+
+
+
+
+
+
+    
+      <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Formation Moniteur Auto-École – Educaser</h3>
+                <div class="cta-buttons">
+                <a href="Contact.html#quoteForm" class="cta-button-footer primary-cta">
+                    <i class="fas fa-phone-alt"></i>Demander un devis gratuit 
+                </a>
+                <a href="Contact.html#inscriptionForm" class="cta-button-footer secondary-cta">
+                    <i class="fas fa-file-download"></i>M’inscrire maintenant
+                </a>
+            </div>
+                
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="formation.html">Nos formations</a></li>
+                    <li><a href="financement.html">Financement</a></li>
+                    <li><a href="Qui_sommes_nous.html">Qui sommes-nous</a></li>
+                    <li><a href="nos_centres.html">Nos centres</a></li>
+                    <li><a href="program.html">Programme</a></li>
+                    <li><a href="Témoignage.html">Témoignage</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:01 69 09 27 27"><i class="fas fa-phone-alt"></i> 01 69 09 27 27</a></li>
+                    <li><a href="mailto:contact@educaser.fr"><i class="fas fa-envelope"></i> contact@educaser.fr</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Centres : Palaiseau, Noisy-le-Sec, Meaux</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Educaser. Tous droits réservés. | Formation certifiée RNCP 35329
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+
+         document.addEventListener('DOMContentLoaded', function() {
+            // Form validation and submission
+            const forms = document.querySelectorAll('form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic validation
+                    if (!form.checkValidity()) {
+                        alert('Veuillez remplir tous les champs obligatoires.');
+                        return;
+                    }
+                    
+                    // Form submission logic
+                    const formName = form.id;
+                    let message = '';
+                    
+                    switch(formName) {
+                        case 'inscriptionForm':
+                            message = 'Votre demande d\'inscription a bien été envoyée ! Un conseiller vous contactera sous 24h pour finaliser votre inscription.';
+                            break;
+                        case 'callbackForm':
+                            message = 'Votre demande de rappel a bien été enregistrée. Nous vous appellerons au créneau choisi.';
+                            break;
+                        case 'quoteForm':
+                            message = 'Votre demande de devis a bien été prise en compte. Vous recevrez une estimation par email sous 24h.';
+                            break;
+                        default:
+                            message = 'Merci pour votre message !';
+                    }
+                    
+                    alert(message);
+                    form.reset();
+                });
+            });
+            
+            // Animate form containers on scroll
+            const formContainers = document.querySelectorAll('.form-container, .contact-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                        }, 300);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            formContainers.forEach(container => {
+                container.style.opacity = "0";
+                container.style.transform = "translateY(30px)";
+                container.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+                observer.observe(container);
+            });
+        });
+
+
+        
+        
+        
+    </script>
+            
+
+
+</body>
+</html>
